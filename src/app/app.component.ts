@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio';
+  show : boolean = false;
+
+ openNav() {
+   this.show = true
+}
+   
+ closeNav() {
+  this.show = false;  
+}
 }

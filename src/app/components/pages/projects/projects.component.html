@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row row row-cols-1 row-cols-md-3 g-4 centro">
+        
+        <div class="col" *ngFor="let project of Projects">
+            <div class="card" style="width: 18rem;margin: 20px;">
+                <img [src]="project.img">
+                <div class="card-body">
+                  <h5 class="card-title">{{project.title}} </h5>
+                  <p class="card-text">{{project.text}}</p>
+                  <a *ngIf="project.url" href="{{project.url}} " class="btn btn-primary">Ir al sitio</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="row container" style="padding: 40px;">
+    <!-- Presentación -->
+    <div class="col-8">
+       <div *ngFor="let sec of Texts" class="col" >
+        <div class="row" style="margin-bottom: 40px;" *ngIf="!edit">
+                <div class="col-10">
+                    <h2>{{sec.title}} </h2>
+                    <p>{{sec.text}} </p>
+                    <button class="btn btn-borde" routerLink="{{sec.url}}">Ver más</button>   
+                </div>
+                <div class="col">
+                    <button type="button" style="width: 30px;" class="btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </button>
+               </div>
+        </div>
+        <!-- Apartado de edit -->
+        <div *ngIf="edit" class="col-8">
+            <div style="margin-bottom: 40px;">
+                <input value="{{sec.title}}" class="form-control" style="color: black;">
+                <input value="{{sec.text}}" class="form-control" style="color: black;">                
+            </div>
+        </div>
+    </div> 
+    </div>
+    
+    <div class="col-4" style="margin-top: -30px">
+        <app-icono-edit 
+        (OnAdd)="adding()"
+        (OnEdit)="editing()"
+        style="float: right;">
+        </app-icono-edit>
+    </div> 
+    <!-- Apartado de agregar -->
+    <div *ngIf="add" class="col-8">
+        <div style="margin-bottom: 40px;">
+            <div class="form-group">
+                <input type="text" placeholder="Título" class="form-control" id="titulo">
+            </div>    
+            <div class="form-group">
+                <input type="descripcion" class="form-control"  placeholder="Descripción" id="desc">
+            </div>    
+        </div>
+    </div>
+
+    <div *ngIf="edit">
+        <button class="btn btn-borde" type="submit">Cargar</button>
+        <button class="btn" (click)="editing()" style= "float: right;" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+        </button>  
+    </div>
+    <div *ngIf="add">
+        <button class="btn btn-borde" type="submit">Cargar</button>
+        <button class="btn" (click)="adding()" style= "float: right; padding-right: 300px;" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+            </svg>
+        </button>  
+    </div>
+</div>
