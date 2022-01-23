@@ -27,6 +27,9 @@ body{
     display: block;
     justify-content: center;
 }
+.borde{
+    border: 1px solid rgb(58, 58, 58);
+}
 .btn {
     display: inline-block;
     color: #fff;
@@ -59,6 +62,15 @@ body{
     overflow: auto;
     min-height: 300px;
     border-radius: 15px;
+  
+}
+.card-borde{
+    
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border-radius: 15px;
+    border: 2px solid rgb(58, 58, 58);
   
 }
 .footer{

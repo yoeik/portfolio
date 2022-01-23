@@ -12,6 +12,10 @@ import { ProjectsComponent } from './components/pages/projects/projects.componen
 import { HomeComponent } from './components/pages/home/home.component';
 import { EnfoqueComponent } from './components/pages/enfoque/enfoque.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import { InfiniteScrollExampleComponent } from './components/infinite-scroll-example/infinite-scroll-example.component';
+
+
 
 
 @NgModule({
@@ -26,11 +30,12 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     EnfoqueComponent,
     FooterComponent,
-
+    InfiniteScrollExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

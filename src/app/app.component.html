@@ -1,6 +1,8 @@
 
-<button class="btn colored" (click)="openNav()">
-    <span style="font-size:30px">&#9776;</span>
+<button class="btn colored" (click)="openNav()" style="margin-top: 10px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg>
 </button>
 
 <div class="sidenav" [style.width]="show ? '250px': '0px' " style="overflow-x: hidden;">
@@ -8,3 +10,4 @@
 </div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+<app-infinite-scroll-example></app-infinite-scroll-example>
