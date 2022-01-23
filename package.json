@@ -8,9 +8,14 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "server": "nodemon server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
+    "heroku-postbuild": "ng build --prod"
+
+    
   
+    
+    
+  
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
