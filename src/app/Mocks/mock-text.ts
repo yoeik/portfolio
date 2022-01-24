@@ -1,4 +1,4 @@
-import { Seccion } from './Interfaces/Seccion';
+import { Seccion } from '../Interfaces/Seccion';
 export const TEXTS: Seccion[]= [
     {
         title: "Acerca de mí",

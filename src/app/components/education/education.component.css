@@ -1,0 +1,9 @@
+*{
+    color: aliceblue;
+}
+.card-header{
+    color: black;
+}
+.card{
+    background-color: rgb(140,140,140);
+}

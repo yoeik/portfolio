@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TEXTS } from '../../../mock-text';
+import { TEXTS } from '../../../Mocks/mock-text';
 
 
 @Component({

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4 centro">
+        <div class="col" *ngFor="let curso of edu">
+            <div class="card space card-borde">
+                <div class="card-header">
+                  {{curso.title}}
+                </div>
+                <div class="card-body">
+                     <cite title="Source Title" >{{curso.site}}</cite>
+                    <p>{{curso.descri}} </p>
+                    <a href="{{curso.url}}">
+                        <button class="btn btn-borde">
+                                Ir al sitio
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

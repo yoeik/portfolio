@@ -14,6 +14,7 @@ import { EnfoqueComponent } from './components/pages/enfoque/enfoque.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 import { InfiniteScrollExampleComponent } from './components/infinite-scroll-example/infinite-scroll-example.component';
+import { EducationComponent } from './components/education/education.component';
 
 
 
@@ -30,7 +31,8 @@ import { InfiniteScrollExampleComponent } from './components/infinite-scroll-exa
     HomeComponent,
     EnfoqueComponent,
     FooterComponent,
-    InfiniteScrollExampleComponent
+    InfiniteScrollExampleComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
